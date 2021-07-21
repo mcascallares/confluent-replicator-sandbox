@@ -2,6 +2,14 @@
 
 Sandbox environment to easily test Confluent Replicator against a single Kafka cluster that acts as a source and destination
 
+
+## Start Zookeeper and Kafka
+
+```
+docker-compose up -d
+```
+
+
 ## Create sample topic
 
 ```
@@ -11,6 +19,7 @@ kafka-topics --bootstrap-server localhost:29092 \
     --partitions 3 \
     --replication-factor 1
 ```
+
 
 ## Produce sample data
 
@@ -34,6 +43,7 @@ confluent-5.4.2/bin/replicator \
  --whitelist test-topic
 ```
 
+
 ## Validate data being replicated
 
 ```
@@ -48,6 +58,7 @@ kafka-console-consumer --bootstrap-server localhost:29092 \
     --from-beginning \
     --property print.key=true
 ```
+
 
 ## Test behavior when source topic does not exist
 
