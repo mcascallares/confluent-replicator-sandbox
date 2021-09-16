@@ -36,11 +36,11 @@ kafka-producer-perf-test --throughput 500 \
 
 ```
 <path_to_replicator>/replicator \
- --consumer.config ./replicator-consumer.properties \
- --producer.config ./replicator-producer.properties \
- --cluster.id my-replicator \
- --replication.config ./replicator.properties \
- --whitelist test-topic
+   --consumer.config ./replicator-consumer.properties \
+   --producer.config ./replicator-producer.properties \
+   --cluster.id my-replicator \
+   --replication.config ./replicator.properties \
+   --whitelist test-topic
 ```
 
 
@@ -64,11 +64,11 @@ kafka-console-consumer --bootstrap-server localhost:29092 \
 
 ```
 <path_to_replicator>/replicator \
- --consumer.config ./replicator-consumer.properties \
- --producer.config ./replicator-producer.properties \
- --cluster.id my-replicator \
- --replication.config ./replicator.properties \
- --whitelist topic-that-does-not-exist
+   --consumer.config ./replicator-consumer.properties \
+   --producer.config ./replicator-producer.properties \
+   --cluster.id my-replicator \
+   --replication.config ./replicator.properties \
+   --whitelist topic-that-does-not-exist
 ```
 
 ## Disabling topic configuration sync
@@ -78,11 +78,11 @@ from source to target topics.
 
 ```
 <path_to_replicator>/replicator \
- --consumer.config ./replicator-consumer.properties \
- --producer.config ./replicator-producer.properties \
- --cluster.id my-replicator \
- --replication.config ./replicator.properties \
- --whitelist test-topic \
- --topic.config.sync false
+   --consumer.config ./replicator-consumer.properties \
+   --producer.config ./replicator-producer.properties \
+   --cluster.id my-replicator \
+   --replication.config ./replicator.properties \
+   --whitelist test-topic \
+   --topic.config.sync false
 ```
 
