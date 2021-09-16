@@ -35,7 +35,7 @@ kafka-producer-perf-test --throughput 500 \
 ## Execution
 
 ```
-confluent-5.4.2/bin/replicator \
+replicator \
  --consumer.config ./replicator-consumer.properties \
  --producer.config ./replicator-producer.properties \
  --cluster.id my-replicator \
@@ -63,7 +63,7 @@ kafka-console-consumer --bootstrap-server localhost:29092 \
 ## Test behavior when source topic does not exist
 
 ```
-confluent-5.4.2/bin/replicator \
+replicator \
  --consumer.config ./replicator-consumer.properties \
  --producer.config ./replicator-producer.properties \
  --cluster.id my-replicator \
@@ -71,11 +71,18 @@ confluent-5.4.2/bin/replicator \
  --whitelist topic-that-does-not-exist
 ```
 
+## Disabling topic sync configuration
+
+Setting topic.config.sync to false will disable the sync of topic configuration
+from source to target topics.
+
 ```
-confluent-6.1.2/bin/replicator \
+replicator \
  --consumer.config ./replicator-consumer.properties \
  --producer.config ./replicator-producer.properties \
  --cluster.id my-replicator \
  --replication.config ./replicator.properties \
- --whitelist topic-that-does-not-exist
+ --whitelist test-topic \
+ --topic.config.sync false
 ```
+
