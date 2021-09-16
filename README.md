@@ -35,7 +35,7 @@ kafka-producer-perf-test --throughput 500 \
 ## Execution
 
 ```
-replicator \
+<path_to_replicator>/replicator \
  --consumer.config ./replicator-consumer.properties \
  --producer.config ./replicator-producer.properties \
  --cluster.id my-replicator \
@@ -63,7 +63,7 @@ kafka-console-consumer --bootstrap-server localhost:29092 \
 ## Test behavior when source topic does not exist
 
 ```
-replicator \
+<path_to_replicator>/replicator \
  --consumer.config ./replicator-consumer.properties \
  --producer.config ./replicator-producer.properties \
  --cluster.id my-replicator \
@@ -77,7 +77,7 @@ Setting topic.config.sync to false will disable the sync of topic configuration
 from source to target topics.
 
 ```
-replicator \
+<path_to_replicator>/replicator \
  --consumer.config ./replicator-consumer.properties \
  --producer.config ./replicator-producer.properties \
  --cluster.id my-replicator \
