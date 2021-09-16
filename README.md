@@ -71,7 +71,7 @@ replicator \
  --whitelist topic-that-does-not-exist
 ```
 
-## Disabling topic sync configuration
+## Disabling topic configuration sync
 
 Setting topic.config.sync to false will disable the sync of topic configuration
 from source to target topics.
